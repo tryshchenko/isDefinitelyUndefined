@@ -5,6 +5,9 @@ Sometimes people write pretty useless code. This library will contain enough use
 
 ## How To Use
 1. Include library to your app
+
 2. Use a global variable - function isDefinetelyUndefined
+
 isDefinetelyUndefined(undefined) === true;
+
 isDefinetelyUndefined('lol') === false;
