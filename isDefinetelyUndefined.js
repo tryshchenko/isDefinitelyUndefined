@@ -2,7 +2,7 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tryshchenko Oleksandr @ensaier
 */
-var isDefinetelyUndefined = (function() {
+var isDefinitelyUndefined = (function() {
 	'use strict';
 
 	/**
