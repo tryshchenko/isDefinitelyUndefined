@@ -8,7 +8,7 @@ var isDefinitelyUndefined = (function() {
 	/**
 	 * Checks is the value looks like undefined, but not mandatory undefined
 	 * @param  {any}  something
-	 * @return {Boolean} 
+	 * @return {Boolean}
 	 */
 	var isApproximtelyUndefined = function(something) {
 		return something == null;
@@ -17,7 +17,7 @@ var isDefinitelyUndefined = (function() {
 	/**
 	 * Predicts is value undefined or not
 	 * @param  {any}  something
-	 * @return {Boolean} 
+	 * @return {Boolean}
 	 */
 	var isItProbablyUndefined = function(something) {
 		return something === undefined;
@@ -26,7 +26,7 @@ var isDefinitelyUndefined = (function() {
 	/**
 	 * Check is value an undefined for hesitators
 	 * @param  {any}  something
-	 * @return {Boolean} 
+	 * @return {Boolean}
 	 */
 	var isItGoingToBeUndefined = function(something) {
 		return typeof(something) === 'undefined';
@@ -35,7 +35,7 @@ var isDefinitelyUndefined = (function() {
 	/**
 	 * Check is undefined for hipsters
 	 * @param  {any}  something
-	 * @return {Boolean} 
+	 * @return {Boolean}
 	 */
 	var isItReallyUndefined = function(something) {
 		return something === void 0;
@@ -44,7 +44,7 @@ var isDefinitelyUndefined = (function() {
 	/**
 	 * Check is value an undefined for nuts
 	 * @param  {any}  something
-	 * @return {Boolean} 
+	 * @return {Boolean}
 	 */
 	var isPrettySureUndefined = function(something) {
 		return something + [] === 'undefined';
@@ -53,10 +53,19 @@ var isDefinitelyUndefined = (function() {
 	/**
 	 * Check is value an undefined for hesitators
 	 * @param  {any}  something
-	 * @return {Boolean} 
+	 * @return {Boolean}
 	 */
 	var isItAbsolutelyUndefined = function(something) {
 		return something === (function(){})();
+	}
+
+	/**
+	 * Check is value an undefined for argumentators
+	 * @param  {any}  something
+	 * @return {Boolean}
+	 */
+	var isItArgumentativelyUndefined = function(something) {
+		return something === (undefined => undefined)();
 	}
 
 	return function(something) {
@@ -65,6 +74,7 @@ var isDefinitelyUndefined = (function() {
 			&& isItGoingToBeUndefined(something)
 			&& isItReallyUndefined(something)
 			&& isPrettySureUndefined(something)
-			&& isItAbsolutelyUndefined(something);
+			&& isItAbsolutelyUndefined(something)
+			&& isItArgumentativelyUndefined(something);
 	}
 })();
